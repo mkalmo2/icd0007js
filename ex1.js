@@ -1,10 +1,5 @@
 numbers = [1, 2, '3', 6, 2, 3, 2, 3];
 
 let count = 0;
-for (let number of numbers) {
-    if (number === 3) {
-        count++;
-    }
-}
 
 console.log(`found it ${count} times`);

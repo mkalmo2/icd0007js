@@ -1,9 +1,7 @@
 
-let printerFunction = function (result) {
-    console.log(result);
-};
 
-factorial(5, printerFunction);
+
+
 
 function factorial(n, myCallback) {
     if (n < 0) {
