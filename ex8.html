@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html>
-<body>
+<!DOCTYPE html><html><body><script>
 
-    <div id="result-div" style="display: none">
-    Result: <span id="result"></span>
-    </div>
+    let listUrl = 'https://restcountries.eu/rest/v2/regionalbloc/eu?fields=alpha2Code';
+    let totalArea = 0;
 
-    <button id="b1">Say Hello</button>
+    // kood tuleb siia
 
-    <script>
+    function getJson(url, callback) {
+        fetch(url)
+            .then(response => response.json())
+            .then(callback);
+    }
 
-        var resultDiv = document.getElementById('result-div');
-
-
-    </script>
-
-</body>
-</html>
+</script></body></html>

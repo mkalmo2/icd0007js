@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html>
-<body>
+<!DOCTYPE html><html><body><script>
 
-    <div id="result-div" style="display: none">
-    Result: <span id="result"></span>
-    </div>
+    let baseUrl = 'https://restcountries.eu/rest/v2/alpha/';
+    let urlEe = baseUrl + 'ee';
+    let urlLv = baseUrl + 'lv';
+    let urlLt = baseUrl + 'lt';
 
-    <script>
+    let totalArea = 0;
 
-        var resultDiv = document.getElementById("result-div");
+    // kood tuleb siia
 
-        // set div-s style.display property to 'block'
 
-        // set span-s innerText property to 'Hello!'
+    function getJson(url, callback) {
+        fetch(url)
+            .then(response => response.json())
+            .then(callback);
+    }
 
-    </script>
-
-</body>
-</html>
+</script></body></html>
