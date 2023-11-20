@@ -3,11 +3,11 @@
     const url = 'https://enos.itcollege.ee/~makalm/icd0007/foorum/api.php'
               + '?username=mkalmo&cmd=find-posts';
 
-    let promise1 = fetch(url);
+    const promise1 = fetch(url);
 
     console.log(promise1); // Promise {<pending>}
 
-    let promise2 = promise1
+    const promise2 = promise1
         .then(response => response.text());
 
     promise2.then(text => console.log(text));

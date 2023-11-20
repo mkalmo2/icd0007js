@@ -7,11 +7,11 @@
     main();
 
     async function main() {
-        let promise1 = fetch(url);
+        const promise = fetch(url);
 
-        console.log(promise1); // Promise {<pending>}
+        console.log(promise); // Promise {<pending>}
 
-        let result = await promise1;
+        const result = await promise;
 
         console.log(result); // Response { ...
         console.log(result.status); // 200
