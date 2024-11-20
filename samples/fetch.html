@@ -1,12 +1,10 @@
-<!DOCTYPE html><html lang="en"><head></head><body><script>
+<!DOCTYPE html><html lang="en"><head></head><body><script type="module">
 
     const url = 'https://enos.itcollege.ee/~makalm/icd0007/foorum/api.php'
               + '?username=mkalmo&cmd=find-posts';
 
-    fetch(url)
-        .then(response => response.text())
-        .then(data => console.log(data));
+    const result = await fetch(url);
 
-    console.log('End');
+    console.table(await result.json())
 
 </script></body></html>

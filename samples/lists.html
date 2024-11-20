@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rakenduse seisu hoidmine</title>
+</head>
+<body>
+
+<form>
+
+    <select id="select1" multiple="multiple"></select>
+
+    <button type="submit" id="list1_to_list2">&gt;&gt;</button>
+    <button type="submit" id="list2_to_list1">&lt;&lt;</button>
+
+    <select id="select2" multiple="multiple"></select>
+
+</form>
+
+<script type="module">
+
+    const select1 = document.getElementById('select1');
+    const select2 = document.getElementById('select2');
+    const button1 = document.getElementById('list1_to_list2')
+    const button2 = document.getElementById('list2_to_list1')
+
+    const list1 = [1, 2, 3, 4];
+    const list2 = [5, 6];
+
+    button1.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        moveFromTo(list1, list2, select1.value);
+        renderSelects();
+    });
+
+    button2.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        moveFromTo(list2, list1, select2.value);
+        renderSelects();
+    });
+
+    renderSelects();
+
+    function moveFromTo(list1, list2, number) {
+        const index = list1.indexOf(parseInt(number));
+        list1.splice(index, 1);
+        list2.push(number);
+    }
+
+    function renderSelects() {
+        select1.replaceChildren();
+        for (const number of list1) {
+            addOption(select1, number);
+        }
+
+        select2.replaceChildren();
+        for (const number of list2) {
+            addOption(select2, number);
+        }
+    }
+
+    function addOption(select, number) {
+        const option = document.createElement('option');
+        option.innerText = number;
+        option.value = number;
+
+        select.appendChild(option);
+    }
+
+</script>
+
+</body>
+</html>
