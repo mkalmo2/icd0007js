@@ -27,14 +27,14 @@
     const list1 = [1, 2, 3, 4];
     const list2 = [5, 6];
 
-    button1.addEventListener('click', function (event) {
+    button1.addEventListener('click', event => {
         event.preventDefault();
 
         moveFromTo(list1, list2, select1.value);
         renderSelects();
     });
 
-    button2.addEventListener('click', function (event) {
+    button2.addEventListener('click', event => {
         event.preventDefault();
 
         moveFromTo(list2, list1, select2.value);
