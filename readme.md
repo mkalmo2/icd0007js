@@ -10,24 +10,26 @@ tööriistade vaatest "Console" saki alt.
 2.  Kirjutage funktsioon, mis võtab argumendiks numbrite listi ja
     tagastab listi, milles on esialgse listi paaritud arvud.
 
-    getOddNumbers(\[1, 2, 3\]) tagastab \[1, 3\]
+    ```getOddNumbers([1, 2, 3]); // tagastab [1, 3]``` 
 
     kontrollimaks, kas number on paaritu, saame kontrollida, kas kahega
     jagamisel jääb jääk. 4 % 2 on 0 ja 3 % 2 on 1.
 
-    1)  kasutage for tsüklit
-    2)  kastuage listi meetodit filter()
+    - kasutage for tsüklit
+    - kastuage listi meetodit filter()
 
 3.  Kirjutage funktsioon isInList(list, elementToBeFound), mis ütleb kas
     listis on selline element või mitte.
 
-    isInList(\[1, 2, 3\], 2) tagastab true; isInList(\[1, 2, 3\], 4)
-    tagastab false;
+    ```
+    isInList([1, 2, 3], 2) // tagastab true; 
+    isInList([1, 2, 3], 4) // tagastab false;
+    ```
 
-    1)  kasutage for tsüklit
-    2)  kastuage listi meetodit find() find() töötab nagu filter() aga
-        tagastab ainult esimese tingimusele vastava kirje. Kui ühtegi
-        sobivat kirjet ei leita, siis tagastatakse undefined.
+    - kasutage for tsüklit
+    - kastuage listi meetodit find() find() töötab nagu filter() aga
+      tagastab ainult esimese tingimusele vastava kirje. Kui ühtegi
+      sobivat kirjet ei leita, siis tagastatakse undefined.
 
 4.  Tehke list, milles on kolm isiku objekti. Isikul on nimi ja kuitahes
     palju telefoninumbreid.
@@ -35,15 +37,14 @@ tööriistade vaatest "Console" saki alt.
     Kirjutage funktsioon, mis võtab sisse isikute listi ja tagastab need
     isikud, kellel on etteantud telefoninumber.
 
-    findPersonsByPhoneNumber(personList, phone);
+    ```findPersonsByPhoneNumber(personList, phone);```
 
 5.  Kirjutage kood, mis teeb isiku objektist stringi (JSON) ja seejärel
     stringist isiku objekti tagasi.
 
-6.  Aadressil
-    https://enos.itcollege.ee/~makalm/icd0007/foorum/api.php?username=<Github'i kastuajanimi>
-    on teenus, läbi mille saate foorumi rakendusega suhelda. NB!
-    Github'i kastuajanime peate asendama enda omaga.
+6.  Aadressil https://enos.itcollege.ee/~makalm/icd0007/foorum/api.php?username=<Github'i kastuajanimi>
+    on teenus, läbi mille saate foorumi rakendusega suhelda. 
+    NB! Github'i kastuajanime peate asendama enda omaga.
 
     Proovimiseks tehke GET päring aadressile:
     https://enos.itcollege.ee/~makalm/icd0007/foorum/api.php?username=<Github'i kastuajanimi>&cmd=find-posts
